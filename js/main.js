@@ -1,7 +1,7 @@
 // Game values
 let min = 1,
     max = 5
-    winningNum = 2,
+    winningNum = getRandomNumber(min, max),
     guessesLeft = 3;
 
 // Elements
@@ -69,6 +69,11 @@ function setMessage(msg, clr = 'black'){
 function showStartBtn(){
     guessBtn.value = 'Start New Game';
     guessBtn.className += 'play-again';
+}
+
+// Get winning number
+function getRandomNumber(min, max){
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
  
     
